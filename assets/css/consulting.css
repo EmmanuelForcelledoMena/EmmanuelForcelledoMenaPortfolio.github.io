@@ -1,0 +1,77 @@
+/* Professional / consulting layer — overrides Solid State accents only where needed */
+
+body,
+input,
+select,
+textarea {
+	font-family: "DM Sans", "Source Sans Pro", Helvetica, sans-serif;
+	font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Fraunces", "Palatino Linotype", Georgia, serif;
+	font-weight: 500;
+	letter-spacing: 0.02em;
+}
+
+#banner h2 {
+	font-weight: 500;
+	letter-spacing: 0.04em;
+}
+
+#banner > .inner > p {
+	font-size: 1.05em;
+	line-height: 1.65;
+	max-width: 36em;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 0.95;
+}
+
+#banner .logo .icon {
+	color: #c9a962;
+}
+
+a {
+	color: #a8b8e8;
+}
+
+a:hover {
+	color: #d4c4a8;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button,
+.button {
+	background-color: #3d4f7a;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+	background-color: #c9a962;
+	color: #2e3141 !important;
+}
+
+.spotlight .content p {
+	line-height: 1.75;
+	font-size: 1.02em;
+}
+
+#wrapper > section > header h2,
+#wrapper > section h2.major {
+	border-color: rgba(201, 169, 98, 0.35);
+}
+
+#footer h2.major {
+	border-color: rgba(201, 169, 98, 0.35);
+}
