@@ -1,4 +1,8 @@
-/* Professional / consulting layer — overrides Solid State accents only where needed */
+/* Consulting / senior portfolio layer — typography, experience layout, polish */
+
+html {
+	scroll-behavior: smooth;
+}
 
 body,
 input,
@@ -6,6 +10,8 @@ select,
 textarea {
 	font-family: "DM Sans", "Source Sans Pro", Helvetica, sans-serif;
 	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h1,
@@ -19,38 +25,190 @@ h6 {
 	letter-spacing: 0.02em;
 }
 
-#banner h2 {
+#header h1 a {
+	letter-spacing: 0.06em;
 	font-weight: 500;
-	letter-spacing: 0.04em;
 }
 
-#banner > .inner > p {
-	font-size: 1.05em;
-	line-height: 1.65;
-	max-width: 36em;
+#banner {
+	text-align: center;
+}
+
+#banner h2 {
+	font-weight: 600;
+	letter-spacing: 0.045em;
+	text-wrap: balance;
+}
+
+#banner .inner {
+	padding-top: 4.5em;
+	padding-bottom: 3.5em;
+}
+
+#banner > .inner > p,
+#banner .banner-tagline {
+	font-size: 1.08em;
+	line-height: 1.72;
+	max-width: 38em;
 	margin-left: auto;
 	margin-right: auto;
-	opacity: 0.95;
+	opacity: 0.96;
+	font-weight: 400;
+}
+
+#banner .banner-tagline strong {
+	color: #f0e6d2;
+	font-weight: 600;
+}
+
+#banner .logo {
+	margin-bottom: 1.25em;
 }
 
 #banner .logo .icon {
-	color: #c9a962;
+	color: #d4b76a;
+	text-shadow: 0 0 1.5em rgba(212, 183, 106, 0.35);
 }
 
 a {
-	color: #a8b8e8;
+	color: #b8c9f0;
+	border-bottom-color: rgba(184, 201, 240, 0.35);
+	transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 a:hover {
-	color: #d4c4a8;
+	color: #e8dcc4;
 }
 
+/* Spotlight imagery */
+.spotlight .image.profile-shot {
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow:
+		0 4px 24px rgba(0, 0, 0, 0.35),
+		0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.spotlight .image.profile-shot img {
+	border-radius: 10px;
+	display: block;
+}
+
+.spotlight .content p {
+	line-height: 1.78;
+	font-size: 1.03em;
+}
+
+a.special {
+	letter-spacing: 0.12em;
+}
+
+/* Experience section */
+.experience-block .experience-lead {
+	font-size: 1.05em;
+	line-height: 1.7;
+	max-width: 48em;
+	margin-bottom: 2.25em;
+	opacity: 0.92;
+}
+
+.exp-cards {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+}
+
+.exp-card {
+	background: linear-gradient(
+		145deg,
+		rgba(255, 255, 255, 0.045) 0%,
+		rgba(46, 49, 65, 0.65) 100%
+	);
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 10px;
+	padding: 1.65em 1.75em 1.5em 1.75em;
+	border-left: 4px solid rgba(212, 183, 106, 0.75);
+	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+	transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.exp-card:hover {
+	border-left-color: #d4b76a;
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
+}
+
+.exp-card h3 {
+	font-size: 1.05em;
+	margin: 0 0 0.35em 0;
+	line-height: 1.35;
+	color: #fff;
+	font-weight: 600;
+}
+
+.exp-card .exp-meta {
+	font-size: 0.88em;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.45);
+	margin: 0 0 1.1em 0;
+	line-height: 1.5;
+}
+
+.exp-card ul {
+	margin: 0;
+	padding-left: 1.15em;
+	list-style: disc;
+}
+
+.exp-card li {
+	margin-bottom: 0.55em;
+	line-height: 1.62;
+	color: rgba(255, 255, 255, 0.88);
+	font-size: 0.98em;
+}
+
+.exp-card li:last-child {
+	margin-bottom: 0;
+}
+
+/* Portfolio grid refinement */
+.portfolio-block .features article {
+	background: linear-gradient(160deg, #363a4d 0%, #2c3040 100%);
+	border: 1px solid rgba(255, 255, 255, 0.07);
+	box-shadow: 0 6px 28px rgba(0, 0, 0, 0.22);
+	transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.portfolio-block .features article:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 14px 40px rgba(0, 0, 0, 0.3);
+	border-color: rgba(212, 183, 106, 0.2);
+}
+
+.portfolio-block .features article .major {
+	margin-top: 0.25em;
+}
+
+/* Section headings */
+#wrapper > section > header h2,
+#wrapper > section h2.major {
+	border-color: rgba(212, 183, 106, 0.38);
+	padding-bottom: 0.65em;
+}
+
+#footer h2.major {
+	border-color: rgba(212, 183, 106, 0.38);
+}
+
+/* Buttons & form actions from template */
 input[type="submit"],
 input[type="reset"],
 input[type="button"],
 button,
 .button {
-	background-color: #3d4f7a;
+	background-color: #3a4d78;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+	transition: background-color 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 
 input[type="submit"]:hover,
@@ -58,20 +216,12 @@ input[type="reset"]:hover,
 input[type="button"]:hover,
 button:hover,
 .button:hover {
-	background-color: #c9a962;
-	color: #2e3141 !important;
+	background-color: #d4b76a;
+	color: #1e2130 !important;
+	box-shadow: 0 4px 20px rgba(212, 183, 106, 0.35);
 }
 
-.spotlight .content p {
-	line-height: 1.75;
-	font-size: 1.02em;
-}
-
-#wrapper > section > header h2,
-#wrapper > section h2.major {
-	border-color: rgba(201, 169, 98, 0.35);
-}
-
-#footer h2.major {
-	border-color: rgba(201, 169, 98, 0.35);
+/* Footer contact row */
+#footer .contact li {
+	line-height: 1.65;
 }
